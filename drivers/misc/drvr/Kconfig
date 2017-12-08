@@ -1,0 +1,5 @@
+config EXYNOS_ADI_IF_2
+	bool "Samsung Shared memory Interface for ADI 2"
+	default y
+	---help---
+	  Samsung Shared Memory Interface for ADI from Eric 

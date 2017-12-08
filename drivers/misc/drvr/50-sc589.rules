@@ -1,0 +1,7 @@
+# Rules for creating Device entries for PCIe Boards.
+#
+# See the udev man page for a full description of them.
+# See the udev.rules.examples file for more examples of how to create rules
+
+KERNEL=="SC589_Basic*", NAME="adipcie/%k", MODE="0666"
+

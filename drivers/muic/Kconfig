@@ -1,0 +1,66 @@
+#
+# MUIC devices
+#
+
+comment "MUIC configs"
+
+config USE_MUIC
+	bool "Using MUIC device driver"
+	depends on I2C
+	default n
+	help
+	  If you say yes here you will get support for
+	  the MUIC device driver.
+
+config USE_SAFEOUT
+	bool "Using SAFEOUT device driver"
+	depends on I2C
+	default n
+	help
+	  If you say yes here you will get support for
+	  the SAFEOUT device driver.
+
+config MUIC_NOTIFIER
+	bool "MUIC notifier support"
+	depends on USE_MUIC
+	default n
+	help
+	  If you say yes here you will get support for
+	  the MUIC attached device status change notification.
+
+config MUIC_SYSFS
+	bool "MUIC sysfs support"
+	default n
+	depends on MUIC_NOTIFIER
+	help
+	  'sysfs 'muic' directory create.
+
+config SAMSUNG_MUIC
+	bool "Using samsung MUIC chip driver"
+	depends on USE_MUIC
+	default n
+	help
+	  If you say yes here you will get support for the MUIC chip.
+
+config MUIC_ADCMODE_SWITCH_WA
+	bool "Using MUIC chip ADC Mode change W/A"
+	depends on USE_MUIC
+	default n
+	help
+	  This feature is for MUIC chip's ADC Mode change
+	  chip bug Workaround.
+
+config MUIC_RUSTPROOF_ON_USER
+	bool "Using MUIC chip Rustproof function ON for User binary"
+	depends on USE_MUIC
+	default n
+	help
+	  This feature is for MUIC chip's Rustproof function.
+
+config MUIC_TSU6721
+	bool "Using TSU6721 MUIC"
+	depends on USE_MUIC
+	default n
+	help
+	  If you say yes here you will get support for
+	  the TSU6721 MUIC chip.
