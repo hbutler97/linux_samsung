@@ -1,9 +1,0 @@
-comment "Samsung Board Specific Drivers"
-menuconfig BOARD_DRIVERS
-	bool "Samsung Board Specific Drivers"
-	default n
-
-config BT_BCM89359
-	bool "Broadcom BCM89359 support"
-	default n
-	depends on BOARD_DRIVERS

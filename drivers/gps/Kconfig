@@ -1,3 +1,0 @@
-config GPS_LSI_S5N6420
-        bool "LSI_GPS_CHIPSET_S400"
-        default n
